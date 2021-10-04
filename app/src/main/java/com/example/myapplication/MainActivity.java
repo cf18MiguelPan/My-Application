@@ -15,12 +15,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button enter = findViewById(R.id.enter);
-        EditText username = findViewById(R.id.username);
-        EditText password= findViewById(R.id.password);
+        Button enter = findViewById(R.id.enter);            //button
+        EditText username = findViewById(R.id.username);    //username
+        EditText password= findViewById(R.id.password);     //password
 
         enter.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
+                //username && password:
                 if(username.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
                     Log.i("Test","login ok");   //it works
                 }else{
