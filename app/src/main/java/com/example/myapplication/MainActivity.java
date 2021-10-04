@@ -21,9 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
         enter.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
-                //username && password:
+                //username: admin && password: admin
                 if(username.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
-                    Log.i("Test","login ok");   //it works
+                    Log.i("Test","login ok");   //works
                 }else{
                     Log.i("Test","login ko");   //not works
                 }
