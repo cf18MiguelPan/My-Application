@@ -25,20 +25,12 @@ public class MainActivity extends AppCompatActivity {
 
         enter.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
-                if(username.getText().toString().equals("Hola") && password.getText().toString().equals("Hola")){
+                if(username.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
                     Log.i("Test","login ok");
-                    openActivity2();
                 }else{
                     Log.i("Test","login ko");
                 }
             }
         });
     }
-
-    public void openActivity2(){
-        Intent i = new Intent(this, MainActivity2.class);
-        startActivity(i);
-    }
-
-
 }
