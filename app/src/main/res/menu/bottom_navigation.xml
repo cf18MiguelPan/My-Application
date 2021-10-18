@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+    <item android:id="@+id/formulari"
+        android:title="formulario"
+        android:icon="@drawable/ic_baseline_more_horiz_24" />
+
+    <item android:id="@+id/llistat"
+        android:title="listado"
+        android:icon="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+</menu>
+
