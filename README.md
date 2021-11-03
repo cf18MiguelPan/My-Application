@@ -17,9 +17,6 @@ FRAGMENTS & BOTTOM NAVIGATION:
 
 
 
-
-
-
 ## Technologies
 This project is developed with android studio (java).
 
@@ -40,4 +37,4 @@ I've used this extra clases:
 - [x] Bottom navigation
 - [x] RecyclerView
 - [ ] Sqlite
-- [ ] Toast
+- [ ] Dialog, SnakBar, Toast
