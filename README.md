@@ -1,16 +1,5 @@
 # My-Application
 
-LOGIN APP
-
-username:admin
-password:admin
-
-ok:good
-ko:bad
-
-# Readme example
-Short description of the project and the chosen theme
-
 ## Tasks
 In my project you'll be able to:
 * Login
@@ -18,6 +7,7 @@ In my project you'll be able to:
 * ...
 
 ## Screenshots
+
 #### Bottom navigation
 The navigation of the application is done through the bottom navigation and the fragments
 
