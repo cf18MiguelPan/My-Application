@@ -22,7 +22,7 @@ This project is developed with android studio (java).
 
 I've used this extra clases:
 
-* SQLiteDatabase for the local storage
+* SQLiteDatabase for the local storage(not working)
 * Fragment Manager
 * Recycler View
 
