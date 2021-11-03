@@ -63,9 +63,12 @@ public class llistfragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View viewList = inflater.inflate(R.layout.activity_llista,container,false);
+        View viewList = inflater.inflate(R.layout.fragment_llistfragment,container,false);
 
         ArrayList<String> array_noms = new ArrayList<String>();
+
+        array_noms.add(new String("Hello"));
+        array_noms.add(new String("Hi"));
         array_noms.add(new String("Hola"));
 
         RecyclerView recyclerView = viewList.findViewById(R.id.recyclerView);
