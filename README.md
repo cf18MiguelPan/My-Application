@@ -38,18 +38,15 @@ I've used this extra clases:
 
 
 ## App access
-* Username
-* Password
-
-## Extra information
-#### Colors
-#### Animations
-#### Extra tasks
-#### ...
+* Username = admin
+* Password = admin
 
 ## Finished / unfinished Tasks
 - [x] Splash screen
+- [x] Login
+- [x] Fragments
 - [x] Bottom navigation
+- [x] RecyclerView
 - [ ] Local Storage Sqlite
 - [ ] ... 
 
