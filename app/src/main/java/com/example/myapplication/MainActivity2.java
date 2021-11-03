@@ -16,22 +16,22 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        BottomNavigationView bottomNav = findViewById(R.id.main_menu);
+        BottomNavigationView bottomNav = findViewById(R.id.main_menu);  //BottomNavigationView
 
         //bottomNav.setOnItemSelectedListener(item -> {
         bottomNav.setOnNavigationItemSelectedListener(item ->{
-            Fragment selectedFragment = null;
+            Fragment selectedFragment = null;                       //Is no selected with anyone of the 3 fragments
             switch (item.getItemId()){
                 case R.id.home:
-                    selectedFragment = new fragmentHome();
+                    selectedFragment = new fragmentHome();          //Go to fragment HOME
                     break;
 
                 case R.id.llistat:
-                    selectedFragment = new llistfragment();
+                    selectedFragment = new llistfragment();         //Go to fragment LISTA
                     break;
 
                 case R.id.formulari:
-                    selectedFragment = new formufragment();
+                    selectedFragment = new formufragment();         //Go to fragment FORMULARIO
                     break;
             }
 

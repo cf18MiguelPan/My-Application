@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.myapplication.db.Contact;
 import com.example.myapplication.db.ContactsContract;
 import com.example.myapplication.db.ContactsDBHelper;
 
@@ -27,13 +29,26 @@ public class formufragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    private ContactsDBHelper dbHelper;
+    private SQLiteDatabase db;
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
+    //Create the instance of dbHelper
+
+
     public formufragment() {
         // Required empty public constructor
     }
+
+    public formufragment(ContactsDBHelper dbHelper, SQLiteDatabase db) {
+        this.dbHelper = dbHelper;
+        this.db = db;
+    }
+
+
 
     /**
      * Use this factory method to create a new instance of
@@ -64,12 +79,20 @@ public class formufragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_formufragment, container, false);
-    }
+        View viewForm = inflater.inflate(R.layout.fragment_formufragment, container, false);
 
-    //Create the instance of dbHelper
-    private ContactsDBHelper dbHelper;
-    private SQLiteDatabase db;
+        Button save = viewForm.findViewById(R.id.fragbutton);               //BUTTON GUARDAR
+        EditText name = viewForm.findViewById(R.id.nombre);                 //EDITTEXT NAME
+
+        save.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Contact c = new Contact(name.getText().toString());
+                dbHelper.insertContact(db, c);
+            }
+        });
+
+        return viewForm;
+
+    }
 
 }

@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
                 //username: admin && password: admin
                 if(username.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
                     Log.i("Test","login ok");   //works
-                    openActivity2();
+                    openActivity2();                     //Go to the next activity
                 }else{
                     Log.i("Test","login ko");   //not works
                 }

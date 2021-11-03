@@ -66,10 +66,22 @@ public class llistfragment extends Fragment {
         View viewList = inflater.inflate(R.layout.fragment_llistfragment,container,false);
 
         ArrayList<String> array_noms = new ArrayList<String>();
-
-        array_noms.add(new String("Hello"));
-        array_noms.add(new String("Hi"));
-        array_noms.add(new String("Hola"));
+        //List of String
+        array_noms.add(new String("1"));
+        array_noms.add(new String("2"));
+        array_noms.add(new String("3"));
+        array_noms.add(new String("4"));
+        array_noms.add(new String("5"));
+        array_noms.add(new String("6"));
+        array_noms.add(new String("7"));
+        array_noms.add(new String("8"));
+        array_noms.add(new String("9"));
+        array_noms.add(new String("10"));
+        array_noms.add(new String("11"));
+        array_noms.add(new String("12"));
+        array_noms.add(new String("13"));
+        array_noms.add(new String("14"));
+        array_noms.add(new String("15"));
 
         RecyclerView recyclerView = viewList.findViewById(R.id.recyclerView);
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(array_noms);
