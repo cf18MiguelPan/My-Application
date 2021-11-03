@@ -3,7 +3,6 @@
 ## Tasks
 In my project you'll be able to:
 * Login
-* Add elements to a local database
 * ...
 
 ## Screenshots
@@ -19,6 +18,7 @@ The navigation of the application is done through the bottom navigation and the 
 
 ## Technologies
 This project is developed with android studio (java).
+
 I've used this extra clases:
 
 * SQLiteDatabase for the local storage
@@ -39,8 +39,3 @@ I've used this extra clases:
 - [x] RecyclerView
 - [ ] Local Storage Sqlite
 - [ ] ... 
-
-## Difficulties
-
-
-## Bibliography
