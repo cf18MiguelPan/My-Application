@@ -1,14 +1,19 @@
 package com.example.myapplication;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.myapplication.db.Contact;
+import com.example.myapplication.db.ContactsDBHelper;
 
 import java.util.ArrayList;
 
@@ -28,8 +33,16 @@ public class llistfragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    private ContactsDBHelper dbHelper;
+    private SQLiteDatabase db;
+
     public llistfragment() {
         // Required empty public constructor
+    }
+
+    public llistfragment(ContactsDBHelper dbHelper, SQLiteDatabase db) {
+        this.dbHelper = dbHelper;
+        this.db = db;
     }
 
     /**
@@ -62,31 +75,30 @@ public class llistfragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
         View viewList = inflater.inflate(R.layout.fragment_llistfragment,container,false);
 
-        ArrayList<String> array_noms = new ArrayList<String>();
+        //ArrayList<String> array_noms = new ArrayList<String>();
+
+        ArrayList<String> array_noms = dbHelper.getAllData(db);
+
         //List of String
+        /*
         array_noms.add(new String("1"));
-        array_noms.add(new String("2"));
-        array_noms.add(new String("3"));
-        array_noms.add(new String("4"));
-        array_noms.add(new String("5"));
-        array_noms.add(new String("6"));
-        array_noms.add(new String("7"));
-        array_noms.add(new String("8"));
-        array_noms.add(new String("9"));
-        array_noms.add(new String("10"));
-        array_noms.add(new String("11"));
-        array_noms.add(new String("12"));
-        array_noms.add(new String("13"));
-        array_noms.add(new String("14"));
-        array_noms.add(new String("15"));
+        */
 
         RecyclerView recyclerView = viewList.findViewById(R.id.recyclerView);
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(array_noms);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
+
+        /*
+        RecyclerView recyclerView = view.findViewById(R.id.reciclerView);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(arrayHeroes);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
+         */
 
         return viewList;
 

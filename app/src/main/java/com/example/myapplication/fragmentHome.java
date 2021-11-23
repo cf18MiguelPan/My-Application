@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -56,9 +57,27 @@ public class fragmentHome extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+        View viewForm = inflater.inflate(R.layout.fragment_home, container, false);
+
+        Button ES = viewForm.findViewById(R.id.btnEs);
+        Button CA = viewForm.findViewById(R.id.btnCa);
+
+        ES.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+
+            }
+        });
+
+        CA.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+
+            }
+        });
+
         return inflater.inflate(R.layout.fragment_home, container, false);
+
     }
 }

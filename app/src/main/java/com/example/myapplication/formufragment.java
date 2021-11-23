@@ -17,6 +17,7 @@ import com.example.myapplication.db.Contact;
 import com.example.myapplication.db.ContactsContract;
 import com.example.myapplication.db.ContactsDBHelper;
 
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link formufragment#newInstance} factory method to
@@ -81,18 +82,20 @@ public class formufragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View viewForm = inflater.inflate(R.layout.fragment_formufragment, container, false);
 
+        //dbHelper = new ContactsDBHelper(getApplicationContext());
+        //db = dbHelper.getWritableDatabase();
+
         Button save = viewForm.findViewById(R.id.fragbutton);               //BUTTON GUARDAR
-        EditText name = viewForm.findViewById(R.id.nombre);                 //EDITTEXT NAME
 
         save.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                EditText name = viewForm.findViewById(R.id.nombre);         //EDITTEXT NOMBRE
+
                 Contact c = new Contact(name.getText().toString());
                 dbHelper.insertContact(db, c);
             }
         });
-
         return viewForm;
-
     }
 
 }
