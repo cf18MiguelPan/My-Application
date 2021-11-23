@@ -92,14 +92,6 @@ public class llistfragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
 
-        /*
-        RecyclerView recyclerView = view.findViewById(R.id.reciclerView);
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(arrayHeroes);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
-         */
-
         return viewList;
 
     }

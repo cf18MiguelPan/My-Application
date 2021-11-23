@@ -56,16 +56,21 @@ public class ContactsDBHelper extends SQLiteOpenHelper {
         }
     }
 
+    public void delete() {
+        SQLiteDatabase db=this.getWritableDatabase();
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
+        onCreate(db);
+    }
 
     public ArrayList<String> getAllData(SQLiteDatabase db){
         ArrayList<String> array_noms = new ArrayList<>();
 
-        String GET_ALL_HEROES = "SELECT * FROM " + TABLE_NAME;
+        String GETNAMES = "SELECT * FROM " + TABLE_NAME;
 
         db = getReadableDatabase();
         if(db!=null)
         {
-            Cursor cursor = db.rawQuery(GET_ALL_HEROES, null);
+            Cursor cursor = db.rawQuery(GETNAMES, null);
             cursor.moveToFirst();
             while(!cursor.isAfterLast())
             {

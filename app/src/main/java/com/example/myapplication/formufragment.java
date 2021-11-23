@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
@@ -86,7 +88,6 @@ public class formufragment extends Fragment {
         //db = dbHelper.getWritableDatabase();
 
         Button save = viewForm.findViewById(R.id.fragbutton);               //BUTTON GUARDAR
-
         save.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 EditText name = viewForm.findViewById(R.id.nombre);         //EDITTEXT NOMBRE
@@ -95,6 +96,33 @@ public class formufragment extends Fragment {
                 dbHelper.insertContact(db, c);
             }
         });
+
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("Borrar todos los datos");
+        builder.setMessage("¿Estas seguro que quieres borrar todos los datos de la lista?")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    //when it is given to ok all the data are deleted
+                    public void onClick(DialogInterface dialog, int id) {
+                        dbHelper.delete();
+                    }
+                })
+                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //when canceled it just does nothing
+                    }
+                });
+        AlertDialog dialog = builder.create();
+
+        Button borrar = viewForm.findViewById(R.id.delete);               //BUTTON GUARDAR
+        borrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.show();
+            }
+        });
+
+
         return viewForm;
     }
 
