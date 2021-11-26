@@ -23,12 +23,12 @@ public class MainActivity extends AppCompatActivity {
         EditText username = findViewById(R.id.username);    //username
         EditText password= findViewById(R.id.password);     //password
 
-        CheckBox mantener = findViewById(R.id.sesion);
+        CheckBox mantener = findViewById(R.id.sesion);      //checkbox
 
-        SharedPreferences prefs= getSharedPreferences("SharedP", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
+        SharedPreferences preference= getSharedPreferences("SharedP", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preference.edit();
 
-        if(prefs.getBoolean("login", false) == true){
+        if(preference.getBoolean("login", false) == true){      //save login
             startActivity(new Intent(getApplicationContext(), MainActivity2.class));
         }
 

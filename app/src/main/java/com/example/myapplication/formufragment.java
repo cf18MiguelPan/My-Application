@@ -111,7 +111,7 @@ public class formufragment extends Fragment {
                 });
         AlertDialog dialog = builder.create();
 
-        Button borrar = viewForm.findViewById(R.id.delete);               //BUTTON GUARDAR
+        Button borrar = viewForm.findViewById(R.id.delete);               //BUTTON DELETE
         borrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

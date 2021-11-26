@@ -68,16 +68,16 @@ public class fragmentHome extends Fragment {
 
         View viewForm = inflater.inflate(R.layout.fragment_home, container, false);
 
-        Button ES = viewForm.findViewById(R.id.btnEs);
-        Button CA = viewForm.findViewById(R.id.btnCa);
+        Button ES = viewForm.findViewById(R.id.btnEs);          //button to change spanish
+        Button CA = viewForm.findViewById(R.id.btnCa);          //button to change spanish
 
-        ES.setOnClickListener(new View.OnClickListener(){
+        ES.setOnClickListener(new View.OnClickListener(){       //change to spanish
             public void onClick(View view){
-
+                
             }
         });
 
-        CA.setOnClickListener(new View.OnClickListener(){
+        CA.setOnClickListener(new View.OnClickListener(){       //change to catala
             public void onClick(View view){
 
             }
