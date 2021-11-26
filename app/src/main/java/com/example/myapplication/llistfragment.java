@@ -77,14 +77,7 @@ public class llistfragment extends Fragment {
         // Inflate the layout for this fragment
         View viewList = inflater.inflate(R.layout.fragment_llistfragment,container,false);
 
-        //ArrayList<String> array_noms = new ArrayList<String>();
-
         ArrayList<String> array_noms = dbHelper.getAllData(db);
-
-        //List of String
-        /*
-        array_noms.add(new String("1"));
-        */
 
         RecyclerView recyclerView = viewList.findViewById(R.id.recyclerView);
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(array_noms);

@@ -1,8 +1,6 @@
 package com.example.myapplication.db;
 
 import static com.example.myapplication.db.ContactsContract.ContactsEntry.TABLE_NAME;
-import static com.example.myapplication.db.ContactsContract.ContactsEntry.ID;
-import static com.example.myapplication.db.ContactsContract.ContactsEntry.COLUMN_NAME_TITLE;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;

@@ -84,9 +84,6 @@ public class formufragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View viewForm = inflater.inflate(R.layout.fragment_formufragment, container, false);
 
-        //dbHelper = new ContactsDBHelper(getApplicationContext());
-        //db = dbHelper.getWritableDatabase();
-
         Button save = viewForm.findViewById(R.id.fragbutton);               //BUTTON GUARDAR
         save.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -102,7 +99,7 @@ public class formufragment extends Fragment {
         builder.setTitle("Borrar todos los datos");
         builder.setMessage("¿Estas seguro que quieres borrar todos los datos de la lista?")
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    //when it is given to ok all the data are deleted
+                    //delete list
                     public void onClick(DialogInterface dialog, int id) {
                         dbHelper.delete();
                     }

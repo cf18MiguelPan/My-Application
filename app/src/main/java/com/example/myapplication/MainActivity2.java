@@ -23,8 +23,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         BottomNavigationView bottomNav = findViewById(R.id.main_menu);  //BottomNavigationView
 
-
-//Creation of the dbHelper
+        //Creation of the dbHelper
         dbHelper = new ContactsDBHelper(getApplicationContext());
         db = dbHelper.getWritableDatabase();
 
