@@ -1,5 +1,8 @@
 package com.example.myapplication;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
@@ -72,18 +75,33 @@ public class fragmentHome extends Fragment {
         Button CA = viewForm.findViewById(R.id.btnCa);          //button to change spanish
 
         ES.setOnClickListener(new View.OnClickListener(){       //change to spanish
-            public void onClick(View view){
-                
-            }
+            public void onClick(View view){ Save("Es"); }
         });
 
         CA.setOnClickListener(new View.OnClickListener(){       //change to catala
             public void onClick(View view){
-
+                Save("Ca");
             }
         });
-
         return inflater.inflate(R.layout.fragment_home, container, false);
 
     }
+
+
+    public void Save(String locale){
+        SharedPreferences preferences = getActivity().getSharedPreferences("Preferencias", Context.MODE_PRIVATE);
+        final Configuration config = new Configuration(getResources().getConfiguration());
+        config.locale = new Locale(locale);
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("Idioma",locale );
+        editor.commit();
+        refresh();
+    }
+
+    public void refresh(){
+        Intent intent = new Intent(getContext(),MainActivity.class);
+        startActivity(intent);
+    }
+
 }
