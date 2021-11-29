@@ -36,5 +36,8 @@ I've used this extra clases:
 - [x] Fragments
 - [x] Bottom navigation
 - [x] RecyclerView
-- [ ] Sqlite
-- [ ] Dialog, SnakBar, Toast
+- [x] Sqlite
+- [x] Dialog, SnakBar, Toast
+- [x] Shared Preferences
+- [ ] Multilanguage
+- [ ] Bundle 
