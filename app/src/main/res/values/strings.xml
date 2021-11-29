@@ -5,8 +5,9 @@
     <string name="textview2">YOU LOG IN</string>
     <string name="fragbutton">SAVE</string>
     <string name="nombre">Name</string>
-
+    <string name="delete">delete</string>
     <string name="btnEs">Spanish</string>
     <string name="btnCa">Catalan</string>
+    <string name="btnEn">English</string>
 
 </resources>

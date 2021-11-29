@@ -75,8 +75,9 @@ public class fragmentHome extends Fragment {
 
         Button btnes = viewForm.findViewById(R.id.btnEs);          //button to change spanish
         Button btnca = viewForm.findViewById(R.id.btnCa);          //button to change catalan
+        Button btnen = viewForm.findViewById(R.id.btnEn);          //button to change catalan
 
-        btnes.setOnClickListener(new View.OnClickListener(){       //change to spanish
+        btnen.setOnClickListener(new View.OnClickListener(){       //change to spanish
             public void onClick(View view){
                 Toast.makeText(getContext(), "en------", Toast.LENGTH_LONG).show();
                 Save("en-us"); }
@@ -86,6 +87,12 @@ public class fragmentHome extends Fragment {
             public void onClick(View view){
                 Toast.makeText(getContext(), "ca------", Toast.LENGTH_LONG).show();
                 Save("ca");
+            }
+        });
+        btnes.setOnClickListener(new View.OnClickListener(){       //change to catala
+            public void onClick(View view){
+                Toast.makeText(getContext(), "es------", Toast.LENGTH_LONG).show();
+                Save("es");
             }
         });
         return viewForm;

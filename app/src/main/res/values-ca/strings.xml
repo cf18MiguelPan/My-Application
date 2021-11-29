@@ -5,8 +5,9 @@
     <string name="textview2">HAS REGISTRAT</string>
     <string name="fragbutton">GUARDAR</string>
     <string name="nombre">Nom</string>
-
+    <string name="delete">Borrar</string>
     <string name="btnEs">Castella</string>
     <string name="btnCa">Català</string>
+    <string name="btnEn">Anglès</string>
 
 </resources>
