@@ -11,10 +11,12 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -71,24 +73,27 @@ public class fragmentHome extends Fragment {
 
         View viewForm = inflater.inflate(R.layout.fragment_home, container, false);
 
-        Button ES = viewForm.findViewById(R.id.btnEs);          //button to change spanish
-        Button CA = viewForm.findViewById(R.id.btnCa);          //button to change spanish
+        Button btnes = viewForm.findViewById(R.id.btnEs);          //button to change spanish
+        Button btnca = viewForm.findViewById(R.id.btnCa);          //button to change catalan
 
-        ES.setOnClickListener(new View.OnClickListener(){       //change to spanish
-            public void onClick(View view){ Save("Es"); }
+        btnes.setOnClickListener(new View.OnClickListener(){       //change to spanish
+            public void onClick(View view){
+                Toast.makeText(getContext(), "en------", Toast.LENGTH_LONG).show();
+                Save("en-us"); }
         });
 
-        CA.setOnClickListener(new View.OnClickListener(){       //change to catala
+        btnca.setOnClickListener(new View.OnClickListener(){       //change to catala
             public void onClick(View view){
-                Save("Ca");
+                Toast.makeText(getContext(), "ca------", Toast.LENGTH_LONG).show();
+                Save("ca");
             }
         });
-        return inflater.inflate(R.layout.fragment_home, container, false);
-
+        return viewForm;
     }
 
 
     public void Save(String locale){
+        Toast.makeText(getContext(), locale, Toast.LENGTH_LONG).show();
         SharedPreferences preferences = getActivity().getSharedPreferences("Preferencias", Context.MODE_PRIVATE);
         final Configuration config = new Configuration(getResources().getConfiguration());
         config.locale = new Locale(locale);
