@@ -29,7 +29,7 @@ I've used this extra clases:
 ## App access
 * Username = admin
 * Password = admin
-
+ 
 ## Finished / unfinished Tasks
 - [x] Splash screen
 - [x] Login
