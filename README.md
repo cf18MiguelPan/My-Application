@@ -39,5 +39,5 @@ I've used this extra clases:
 - [x] Sqlite
 - [x] Dialog, SnakBar, Toast
 - [x] Shared Preferences
-- [ ] Multilanguage
+- [x] Multilanguage
 - [ ] Bundle 
