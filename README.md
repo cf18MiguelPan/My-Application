@@ -13,8 +13,7 @@ FRAGMENTS & BOTTOM NAVIGATION:
 ![imatge](https://user-images.githubusercontent.com/48924693/140173206-2d1a0931-57f5-4b98-819b-5bf709d03ce4.png)
 
 
-![imatge](https://user-images.githubusercontent.com/48924693/140173301-b2780117-8d4b-4346-8244-c65c97ab6d0b.png)
-
+![imatge](https://user-images.githubusercontent.com/48924693/148795268-356277fa-9864-4da8-b753-abed4149c691.png)
 
 
 ## Technologies
