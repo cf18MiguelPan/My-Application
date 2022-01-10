@@ -6,6 +6,7 @@ LOGIN:
 ![imatge](https://user-images.githubusercontent.com/48924693/140172463-4da574bc-5bc1-4b55-83a7-99b24b62e9e3.png)
 
 FRAGMENTS & BOTTOM NAVIGATION:
+
 ![imatge](https://user-images.githubusercontent.com/48924693/148794504-e294da97-ad15-4750-b8e9-1db94acd03ee.png)
 
 
