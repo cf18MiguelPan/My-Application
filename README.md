@@ -2,8 +2,8 @@
 
 ## Screenshots
 LOGIN:
- 
-![imatge](https://user-images.githubusercontent.com/48924693/140172463-4da574bc-5bc1-4b55-83a7-99b24b62e9e3.png)
+
+![imatge](https://user-images.githubusercontent.com/48924693/148795029-c8a6f446-db19-49e8-844a-c88a509ab499.png)
 
 FRAGMENTS & BOTTOM NAVIGATION:
 
